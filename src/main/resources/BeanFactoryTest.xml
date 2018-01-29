@@ -23,4 +23,5 @@
     </bean>
 
     <myname:user id="user" name="cccc" email="1111@qq.com"></myname:user>
+
 </beans>

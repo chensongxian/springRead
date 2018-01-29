@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="car" class="com.csx.factory.bean.CarFacotryBean" ></bean>
+
+    <!--静态工厂-->
+    <bean id="getCarByStaticFactory" class="com.csx.factory.bean.StaticFactory" factory-method="createInstance"></bean>
+
+    <!--实例工厂-->
+    <bean id="instanceFactory" class="com.csx.factory.bean.InstanceFactory"></bean>
+
+    <bean id="getCarByInstanceFactory" factory-bean="instanceFactory" factory-method="createInstance"></bean>
+
+</beans>
